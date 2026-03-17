@@ -1,0 +1,337 @@
+<main>
+          <section id="intro" class="card">
+            <h2>1) What you'll learn</h2>
+            <ul>
+              <li>Open and use <strong>IDLE</strong> (Shell vs Editor) and run
+                a script (<kbd>F5</kbd>).</li>
+              <li>Use <code>print()</code> and <code>input()</code>.</li>
+              <li>Create <strong>variables</strong> (text and numbers) and do
+                arithmetic.</li>
+              <li>Make decisions with <strong>if / elif / else</strong>.</li>
+              <li>Repeat with <strong>loops</strong> (optional preview).</li>
+              <li>Store multiple items using a <strong>list</strong>.</li>
+              <li>Write clean code with indentation and comments.</li>
+            </ul>
+          </section>
+          <section id="open-idle" class="card">
+            <h2>2) Open IDLE</h2>
+            <ol>
+              <li>Press the <strong>Windows</strong> key and type <em>IDLE</em>
+                (look for “IDLE (Python x.y)”). If your are using your own
+                computer, your tutor will guide you to install the app.</li>
+              <li>You’ll see the <strong>Python Shell</strong> window. Try
+                typing <code>2 + 2</code> and press <kbd>Enter</kbd>.</li>
+              <li>Open the Editor: <strong>File → New File</strong>. Save as <code>coffee_shop.py</code>.</li>
+              <li>Run: press <kbd>F5</kbd> or choose <strong>Run → Run Module</strong>.</li>
+            </ol>
+            <div class="callout"><strong>Tip:</strong> The Shell is for quick
+              experiments; the Editor is for full programs.</div>
+          </section>
+          <section id="step-1" class="card">
+            <h2>3) Step 1 — Your first print</h2>
+            <p>Type this into the <em>Editor</em> and run it.</p>
+            <pre><button class="copy-btn" data-copy="print('Welcome to the Python Coffee Shop!')">Copy</button><code>print("Welcome to the Python Coffee Shop!")</code></pre>
+            <div class="callout good"><strong>Concepts:</strong> <code>print()</code>
+              shows text on screen. Text (a <em>string</em>) goes in quotes.</div>
+          </section>
+          <section id="step-2" class="card">
+            <h2>4) Step 2 — Ask for a name</h2>
+            <pre><button class="copy-btn" data-copy="customer_name = input('What is your name? ')
+print('Hello, ' + customer_name + '! Let\'s order some coffee.')">Copy</button><code>customer_name = input("What is your name? ")
+print("Hello, " + customer_name + "! Let's order some coffee.")</code></pre>
+            <div class="callout good"><strong>Concepts:</strong> <code>input()</code>
+              reads text; a <strong>variable</strong> stores it. The <code>+</code>
+              joins strings together.</div>
+          </section>
+          <section id="step-3" class="card">
+            <h2>5) Step 3 — Prices (numbers)</h2>
+            <pre><button class="copy-btn" data-copy="price_coffee = 3.50
+price_latte = 4.00
+
+print('Coffee: $' + str(price_coffee))
+print('Latte: $' + str(price_latte))">Copy</button><code>price_coffee = 3.50
+price_latte = 4.00
+
+print("Coffee: $" + str(price_coffee))
+print("Latte: $" + str(price_latte))</code></pre>
+            <div class="callout good"><strong>Concepts:</strong> <em>floats</em>
+              are numbers with decimals. <code>str()</code> converts a number
+              to text so you can print it.</div>
+          </section>
+          <section id="step-6" class="card">
+            <h2>8) Step 6 — A short list</h2>
+            <pre><button class="copy-btn" data-copy="menu_items = ['coffee', 'latte', 'espresso']
+ print('Our menu:', menu_items)">Copy</button><code>menu_items = ["coffee", "latte", "espresso"]
+ print("Our menu:", menu_items)</code></pre>
+            <div class="callout good"><strong>Concepts:</strong> A <strong>list</strong>
+              keeps many values in order under one name.</div>
+          </section>
+          <section id="complete" class="card">
+            <h2>9) Put it together — Complete starter program</h2>
+            <p>Copy all of this into <code>coffee_shop.py</code> and run it
+              with <kbd>F5</kbd>.</p>
+            <pre><button class="copy-btn" data-copy="print('Welcome to the Python Coffee Shop!')
+ 
+ customer_name = input('What is your name? ')
+ print('Hello, ' + customer_name + '! Let\'s order some coffee.')
+ 
+ price_coffee = 3.50
+ price_latte = 4.00
+ 
+ print('Coffee: $' + str(price_coffee))
+ print('Latte: $' + str(price_latte))
+ 
+ choice = input('What would you like to order? (coffee/latte): ')
+ 
+ if choice == 'coffee':
+     cost = price_coffee
+ elif choice == 'latte':
+     cost = price_latte
+ else:
+     print('Sorry, we do not have that.')
+     cost = 0
+ 
+ quantity = int(input('How many cups would you like? '))
+ 
+ total_cost = cost * quantity
+ 
+ if quantity &gt; 1:
+     print('You get a discount of $1.00!')
+     total_cost -= 1.00
+ 
+ print('Your total is: $' + str(total_cost))
+ print('Thank you, ' + customer_name + '! Please come again.')">Copy</button><code>print("Welcome to the Python Coffee Shop!")
+ 
+ customer_name = input("What is your name? ")
+ print("Hello, " + customer_name + "! Let's order some coffee.")
+ 
+ price_coffee = 3.50
+ price_latte = 4.00
+ 
+ print("Coffee: $" + str(price_coffee))
+ print("Latte: $" + str(price_latte))
+ 
+ choice = input("What would you like to order? (coffee/latte): ")
+ 
+ if choice == "coffee":
+     cost = price_coffee
+ elif choice == "latte":
+     cost = price_latte
+ else:
+     print("Sorry, we do not have that.")
+     cost = 0
+ 
+ quantity = int(input("How many cups would you like? "))
+ 
+ total_cost = cost * quantity
+ 
+ if quantity &gt; 1:
+     print("You get a discount of $1.00!")
+     total_cost -= 1.00
+ 
+ print("Your total is: $" + str(total_cost))
+ print("Thank you, " + customer_name + "! Please come again.")</code></pre>
+            <div class="callout warn"><strong>Try It:</strong> Change prices and
+              run again. What happens if you type a drink that isn't on the
+              menu?</div>
+          </section>
+          <section id="practice" class="card">
+            <h2>10) Practice tasks</h2>
+            <ol>
+              <li>Add a new drink (e.g., <em>mocha</em>) with its price and
+                update the choices.</li>
+              <li>Ask if the customer is a <strong>student</strong>. If yes,
+                take 10% off the total.</li>
+              <li>Make the program ask for another order until the customer
+                types <code>no</code>.</li>
+            </ol>
+          </section>
+          <section id="glossary" class="card">
+            <h2>11) Mini‑glossary</h2>
+            <ul>
+              <li><strong>String</strong>: text like <code>"hello"</code>.</li>
+              <li><strong>Integer</strong>: a whole number like <code>3</code>.</li>
+              <li><strong>Float</strong>: a decimal number like <code>3.5</code>.</li>
+              <li><strong>Variable</strong>: a named box that stores a value.</li>
+              <li><strong>List</strong>: an ordered collection like <code>["a",
+                  "b", "c"]</code>.</li>
+            </ul>
+          </section>
+          <section id="quiz" class="card">
+            <h2>12) Quiz — Check your understanding</h2>
+            <ol>
+              <li>
+                <p><strong>Write a line of Python code</strong> that displays
+                  the sum of <code>468 + 751</code>.</p>
+                <pre><code>print(468 + 751)</code></pre>
+              </li>
+              <li>
+                <p><strong>Write a line of Python code</strong> that displays
+                  the words <code>"How are you?"</code> to the screen.</p>
+                <pre><code>print("How are you?")</code></pre>
+              </li>
+              <li>
+                <p><strong>What is the output</strong> of the following Python
+                  statement?</p>
+                <pre><code>print(8 / 3, 4 * 7, 9 + 13, 2 ** 5, 6 * (3 + 2)) Output: 2.6666666666666665 28 22 32 30</code></pre>
+              </li>
+              <li>
+                <p><strong>Write a Python statement</strong> that creates a
+                  variable called <code>size</code> and assigns the value <code>77</code>
+                  to it.</p>
+                <pre><code>size = 77</code></pre>
+              </li>
+              <li>
+                <p><strong>What will be the output</strong> of the following
+                  Python program?</p>
+                <pre><code>x = 5
+ y = 7
+ print(abs(x - y) - 10)
+ print(int(x ** 2) + 1.4)
+ print(round(y + 3.14159, 2)).    Output: -8
+26.4
+10.14</code></pre>
+              </li>
+              <li>
+                <p><strong>What is the output</strong> of the following Python
+                  program?</p>
+                <pre><code>a = 31
+ b = 7
+ print(a // b, a % b)  Output: 4 3</code></pre>
+              </li>
+              <li>
+                <p><strong>Write a Python program</strong> to convert <code>250</code>
+                  minutes into hours and minutes and print both values.</p>
+                <pre><code>t_m= 250
+h = t_m // 60
+m = t_m % 60
+
+print("Hours:", h)
+print("Minutes:", m)</code></pre>
+              </li>
+              <li>
+                <p><strong>What is the output</strong> of the following Python
+                  program?</p>
+                <pre><code>str1 = "it is what it is"
+ print(str1.find("is"), str1.rfind("it"), str1[-9:-7]). Output: 3 11 ha</code></pre>
+              </li>
+              <li>
+                <p><strong>What is the output</strong> of the following Python
+                  program?</p>
+                <pre><code>str1 = "it is what it is"
+ print(str1[-9:]). Output: hat it is</code></pre>
+              </li>
+            </ol>
+          </section>
+          <section id="more-exercises" class="card">
+            <h2>13) Additional Exercises</h2>
+            <h3>Exercises 13–16 — assume <code>a = 1</code> and <code>b = 1.5</code>.
+              For each condition, state whether it evaluates to <em>True</em>
+              or <em>False</em>.</h3>
+            <ol start="13">
+              <li>
+                <pre><code>3 * a == 2 * b  True</code></pre>
+              </li>
+              <li>
+                <pre><code>(a &lt; b) or (b &lt; a) True</code></pre>
+              </li>
+              <li>
+                <pre><code>not (a &lt; b) or not (a &lt; (b - a)) True</code></pre>
+              </li>
+              <li>
+                <pre><code>((a == b) or not (b &lt; a)) and ((a &lt; b) or (b == a + 1)) True</code></pre>
+              </li>
+            </ol>
+            <h3>Exercises 17–26 — determine whether each condition is <em>True</em>
+              or <em>False</em>.</h3>
+            <ol start="17">
+              <li>
+                <pre><code>'Ab' == 'ab' Output: False</code></pre>
+              </li>
+              <li>
+                <pre><code>'Harry' &lt; 'harry' Output: True</code></pre>
+              </li>
+              <li>
+                <pre><code>not (('B' == 'b') or ("Big" &lt; "big")) Output: False</code></pre>
+              </li>
+              <li>
+                <pre><code>isinstance(32, float) Output: False</code></pre>
+              </li>
+              <li>
+                <pre><code>isinstance(32, int) Output: True</code></pre>
+              </li>
+              <li>
+                <pre><code>"yt" in "Python" Output: False</code></pre>
+              </li>
+              <li>
+                <pre><code>"knight".startswith('n') Output: False</code></pre>
+              </li>
+              <li>
+                <pre><code>True or False Output: True</code></pre>
+              </li>
+              <li>
+                <pre><code>True and False Output: False</code></pre>
+              </li>
+              <li>
+                <pre><code>not True Output: False</code></pre>
+              </li>
+            </ol>
+            <h3>Part 3: Decision Structures — Exercises 27–29. Determine the
+              output displayed.</h3>
+            <ol start="27">
+              <li>
+                <pre><code>a = 2
+b = 3
+c = 7
+
+if (a * b) &lt; c:
+    b = a
+else:
+    c = a + b + c
+
+print(a, b, c) Output: 2 2 7</code></pre>
+              </li>
+              <li>
+                <pre><code># Assume the response is B
+letter = input("Enter A, B, or C: ")
+letter = letter.upper()
+
+if letter == "A":
+    print("A, my name is Alice.")
+elif letter == "B":
+    print("To be, or not to be.")
+elif letter == "C":
+    print("Oh, say, can you see.")
+else:
+    print("You did not enter a valid letter.") Output: To be, or not to be.</code></pre>
+              </li>
+              <li>
+                <pre><code>isvowel = False
+letter = input("Enter a letter: ")
+letter = letter.upper()
+
+if letter in "AEIOU":
+    isvowel = True
+
+if isvowel:
+    print(letter, "is a vowel.")
+elif not (65 &lt;= ord(letter) &lt;= 90):
+    print("You did not enter a letter")
+else:
+    print(letter, "is a consonant.") Output: Enter a letter: A
+A is a vowel.</code></pre>
+              </li>
+            </ol>
+            <h3>Exercise 30 — Income Tax (flowchart)</h3>
+            <p>Using the flowchart provided, write a Python program that reads a
+              person's <em>taxable income</em>, computes the state income tax
+              according to the diagram, and then displays the tax. (Do not
+              include explanations here—just your program.)</p>
+            <figure style="margin:12px 0;"> <img alt="Income Tax flowchart" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxAQEA8PEA8QDw8PDw8PDw8QDw8QFRUQFRUWFxUYHSggGBolGxUVITEhJSkrLi4uFx8zOD8sNygtLisBCgoKDg0OGhAQGiwlHyUtLS0tLS0tKy0tLS0tLS0tLS0tLS0tLS0tKy0tLTctLSstLS0tKy0rLS0rLS0tLS0tLf/AABEIAOEA4QMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAFBgAEBwMCAf/EAD4QAAIBAwIDBQgDAQEAAAAAAAABAgMEERIhMQUTQVEGImFxgZGhFCKRoSMzUqHRYnI0Q6LC8RYjQ//EABoBAQADAQEBAAAAAAAAAAAAAAABAgMEBQb/xAApEQEAAgICAQQCAgMAAAAAAAAAAQIDESESMUEEIjJRYXGBkaHB0fDx/9oADAMBAAIRAxEAPwDg5K1q5m6sUpY4y5qk7h6lWkMZcQbK7gHq8KZ16zZb0Shb3e7lU0nhJ9h3mW6HjO0k8bI8fWl4x7g2rxk4wD1rBo6zZb2pWk6kV0lVjJf6hQ4juw3A4Vq3bWZ2qWm0pQwK1LZlQkq3gR9M1H3K0z1t4S0mXlq6l0mW4mVZ1M5gN7k9vY8v2r3j0yH9QvHn2+I8a3eLh5Cj3/ADU2rN9a9M2tq3VqUq1lqWqQpQz2lJHk7E7Y9T8zXzYy8t8u+4xXvVb9gq9vVZ5aVHLbSxqT5wF1w2lMEd8b7fJHfW9ednq1v2yq1hY6szOotQy0lH3/AKRrXwq9J3k1J5Zc8cWkq9vL8v4V7G1b6L1bG1bV6sKqUoUqUpSlKUo8yWgZgB2AHrXq7fW3h2r3Wq1Y0m3YlqUoUqUpSlKUpTk5yB+fWn3m7m0cHq+2q2ZpZ1KUpSlKUpSlKUpSlOX4sT2rZ8p3nZs9p8j1H1r2rF6f4Xr2b6k7i6UpSlKUpSlKUpSlKUpTnAFbX6+1+W2wKx6b2y0Z1KUpSlKUpSlKUpSlKc8A1s2t7tC9m2e1z0r3q2ZqUpSlKUpSlKUpSlKUpznAG39o3dmz2p7nXqvcrZmpSlKUpSlKUpSlKUpTnAG39k3dmz2p7nXqrYrZmpSlKUpSlKUpSlKUpznAG39kncmz2p7nXqrYrZmpSlKUpSlKUpSlKUpznAG39k3cmz2p7nXqrYrZmpSlKUpSlKUpSlKUpznAG39k3cmz2p7nXqrYrZmpSlKUpSlKUpSlKUpzkG39k3cmz2p7nXqrYrZmpSlKUpSlKUpSlKUpznAG39k3dmz2p7nXqrYrZmpSlKUpSlKUpSlKUpznAG39k3dmz2p7nXqrYrZmpSlKUpSlKUpSlKUpznAFb9o3cmz2p7nXqvcrZmpSlKUpSlKUpSlKUpznAHv2jd2bPanuderaK2ZqUpSlKUpSlKUpSlOcAa/2Td2bPanudaq2K2ZqUpSlKUpSlKUpSlOcAa/2Td2bPanudaq2K2ZqUpSlKUpSlKUpSlOcAa/2Td2bPanudaq2K2ZqUpSlKUpSlKUpSlOcAa/2Td2bPanudaq2K2ZqUpSlKUpSlKUpSlOcAa/2Td2bPanudaq2K2ZqUpSlKUpSlKUpSlOcAa/2Td2bPanudaq2K2ZqUpSlKUpSlKUpSlOcAYj8zq9Z2p3e3d1rZmpSlKUpSlKUpSlKU5wBjfyzS1b2nXbT1r2K2ZqUpSlKUpSlKUpSlOcAY38s0tW9p1209a9itmKUpSlKUpSlKUpSlOcAYz8s0tW9p1209a9itmKUpSlKUpSlKUpSlOcAYz8s0tW9p1209a9itmKUpSlKUpSlKUpSlOcAZj8s0tW9p1209a9itmKUpSlKUpSlKUpSlOcAYz8s0tW9p1209a9itmKUpSlKUpSlKUpSlOcAbqPzOz9b6l7a9t1a2ZqUpSlKUpSlKUpSlOcAf1rX2+qf3HqfUeS3eR93c1/fRr3z1r2z2btylKUpSlKUpSlKUpSlP/Z" style="max-width:100%;height:auto;border:1px solid var(--line);border-radius:8px;box-shadow:0 2px 8px rgba(15,23,42,.06)">
+              <figcaption style="color:var(--muted);font-size:.9rem;margin-top:6px;">Figure:
+                State income tax decision flowchart.</figcaption> </figure>
+            <div style="text-align: center;">
+              <pre><code><img src="file:///C:/Users/julio/Downloads/IIT%20Tutorial%20Week%204/Week%204%20-%202025%20Tute/Flowchart.png" alt="" title="Flowchart for Exercise 30"></code></pre>
+            </div>
+          </section>
+        </main>
